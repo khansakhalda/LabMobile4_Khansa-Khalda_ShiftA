@@ -18,9 +18,11 @@
 # Alur Website Toko Kita Khansa
 
 1. **Proses Registrasi**
+
    a. Input Data untuk Registrasi
    ![Tampilan Input Registrasi](./inputregistrasi.jpg)
    Penjelasan:
+
    Pada proses ini, pengguna akan mengisi nama, email, password, dan konfirmasi password pada form registrasi. Data ini kemudian dikirim ke server untuk disimpan di database. Kode berikut menangani pengiriman data ke API:
 
    RegistrasiBloc.registrasi(
@@ -32,6 +34,7 @@
    b. Pop-up Berhasil Registrasi
    ![Tampilan Pop Up Berhasil Registrasi](./popupregistrasi.jpg)
    Penjelasan:
+
    Setelah berhasil mendaftar, pengguna akan melihat pop-up notifikasi bahwa registrasi berhasil, seperti yang ditampilkan oleh kode berikut:
 
    showDialog(
@@ -43,10 +46,12 @@
    )
    );
 
-2. **Proses Login**
+3. **Proses Login**
+
    a. Input Data untuk Login
    ![Tampilan Input Login](./inputlogin.jpg)
    Penjelasan:
+
    Pengguna mengisi email dan password di halaman login. Data tersebut dikirim ke API untuk proses autentikasi:
 
    LoginBloc.login(
@@ -57,6 +62,7 @@
    b. Pop-up Gagal Login
    ![Tampilan Pop Up Gagal Login](./popupgagallogin.jpg)
    Penjelasan:
+
    Jika autentikasi gagal (misalnya, email atau password salah), sistem akan menampilkan pesan pop-up gagal login:
 
    showDialog(
@@ -70,6 +76,7 @@
    c. Berhasil Login
    ![Tampilan Berhasil Login](./listproduk.jpg)
    Penjelasan:
+
    Jika login berhasil, pengguna akan diarahkan ke halaman daftar produk:
 
    Navigator.pushReplacement(
@@ -77,10 +84,12 @@
    MaterialPageRoute(builder: (context) => const ProdukPage())
    );
 
-3. **Proses Tambah Data Produk**
+5. **Proses Tambah Data Produk**
+
    a. Input Data Produk Baru
    ![Tampilan Input Tambah Data Produk](./inputtambahdata.jpg)
    Penjelasan:
+
    Pengguna mengisi kode produk, nama produk, dan harga produk di form tambah produk. Data ini dikirim ke server untuk ditambahkan ke database:
 
    ProdukBloc.addProduk(
@@ -94,15 +103,18 @@
    b. Berhasil Tambah Data
    ![Tampilan Berhasil Tambah Data Berhasil](./berhasiltambahdata.jpg)
    Penjelasan:
+
    Setelah produk berhasil ditambahkan, pengguna akan diarahkan ke halaman ProdukPage yang menampilkan daftar produk:
 
    Navigator.of(context).push(MaterialPageRoute(
    builder: (BuildContext context) => const ProdukPage()));
 
-4. **Proses Detail Produk**
+5. **Proses Detail Produk**
+
    a. Melihat Detail Produk
    ![Tampilan Detail Produk Kemeja](./detailproduk.jpg)
    Penjelasan:
+
    Saat pengguna memilih produk dari daftar, detail produk akan ditampilkan menggunakan halaman detail:
 
    Navigator.push(
@@ -112,10 +124,12 @@
    )
    );
 
-5. **Proses Ubah Produk**
+7. **Proses Ubah Produk**
+
    a. Input Data untuk Ubah Produk
    ![Tampilan Input Ubah Produk Kemeja](./ubahproduk.jpg)
    Penjelasan:
+
    Pengguna dapat mengubah kode produk, nama produk, atau harga produk di halaman ubah produk. Perubahan ini kemudian disimpan di database:
 
    ProdukBloc.updateProduk(
@@ -130,15 +144,18 @@
    b. Berhasil Ubah Data Produk
    ![Tampilan Berhasil Ubah Data Produk](./berhasilubahproduk.jpg)
    Penjelasan:
+
    Berhasil mengubah nama produk dari Kemeja menjadi Celana. Setelah produk berhasil di ubah, pengguna akan diarahkan ke halaman ProdukPage yang menampilkan daftar produk:
 
    Navigator.of(context).push(MaterialPageRoute(
    builder: (BuildContext context) => const ProdukPage()));
 
-6. **Proses Hapus Produk**
+9. **Proses Hapus Produk**
+
    a. Konfirmasi Hapus Produk
    ![Tampilan Pop Up Konfirmasi Hapus Produk](./hapusproduk.jpg)
    Penjelasan:
+
    Saat pengguna mengklik tombol hapus, sebuah dialog konfirmasi akan muncul untuk memastikan apakah pengguna ingin menghapus produk:
 
    showDialog(
@@ -164,14 +181,17 @@
    b. Berhasil Hapus Data Produk
    ![Tampilan Berhasil Hapus Data Produk](./berhasilhapusproduk.jpg)
    Penjelasan:
+
    Berhasil hapus data produk Celana. Setelah produk berhasil di hapus, pengguna akan diarahkan ke halaman ProdukPage yang menampilkan daftar produk:
    Navigator.of(context).push(MaterialPageRoute(
    builder: (context) => const ProdukPage()))
 
-7. **Proses Logout**
+11. **Proses Logout**
+
    a. Tombol Logout
    ![Tampilan Tombol Logout](./logout.jpg)
    Penjelasan:
+
    Pengguna dapat logout dari sistem dengan menekan tombol logout. Ini akan menghapus sesi pengguna dan mengarahkan kembali ke halaman login:
 
    ListTile(
